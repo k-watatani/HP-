@@ -9,20 +9,18 @@ const description = "インサイドハート株式会社の公式サイト。�
   <!-- Hero -->
   <section class="hero">
     <div class="hero-bg-wrapper">
-      <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072');"></div>
-      <div class="hero-curves">
-        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
-          <path class="curve curve-1" d="M0,500 C200,400 300,600 500,500 C700,400 800,600 1000,500 V1000 H0 Z"></path>
-          <path class="curve curve-2" d="M0,600 C250,500 350,700 550,600 C750,500 850,700 1050,600 V1000 H0 Z"></path>
-        </svg>
-      </div>
-      <div class="hero-bg-overlay"></div>
+      <canvas id="hero-canvas" class="hero-canvas"></canvas>
+      <div class="hero-blur-overlay"></div>
+    </div>
+    <div class="hero-light-layer">
+      <div class="light-blob light-blue"></div>
+      <div class="light-blob light-orange"></div>
     </div>
     <div class="container hero-inner">
       <div class="hero-grid">
         <div class="hero-content reveal">
           <span class="category-label">Inside Heart Co., Ltd.</span>
-          <h1>大切な人の、<br/>大切な人を大切にする</h1>
+          <h1><span class="nowrap">一度きりの人生に、</span><br/><span class="nowrap">挑戦のきっかけを。</span></h1>
           <p class="hero-sub">ITと人の力を融合させ、企業の成長と組織の活性化を支援する。<br/>本質的な価値に向き合い、パートナーシップを築きます。</p>
           <div class="hero-actions">
             <a href="/contact" class="btn btn-primary">contact</a>
@@ -30,11 +28,9 @@ const description = "インサイドハート株式会社の公式サイト。�
           </div>
         </div>
         <div class="hero-visual reveal reveal-delay-2">
-          <div class="visual-card">
-            <div class="visual-inner">
-              <span class="visual-tag">Technology & People</span>
-              <div class="visual-dots"></div>
-            </div>
+          <div class="visual-container">
+            <div class="floating-node node-1"></div>
+            <div class="floating-node node-2"></div>
           </div>
         </div>
       </div>
@@ -48,22 +44,16 @@ const description = "インサイドハート株式会社の公式サイト。�
         <span class="section-num">01 / Our Services</span>
         <h2>事業紹介</h2>
       </div>
-      <div class="cards-grid">
-        <div class="card reveal reveal-delay-1">
-          <div class="card-visual">
-            <div class="visual-placeholder">Operation Infrastructure</div>
-          </div>
+      <div class="cards-row reveal">
+        <div class="service-item">
           <div class="card-title">Miroku</div>
           <div class="card-sub">Infrastructure for Motivation</div>
           <p class="card-desc">
-            心理学に基づいた可視化と称賛の仕組みで、組織のポテンシャルを最大化するインフラ。
+            心理学に基づいた可視化と称賛の仕組みで、組織のポテンシャルを最大化する自社開発クラウドインフラ。
           </p>
           <a href="/miroku" class="card-link">View project &rarr;</a>
         </div>
-        <div class="card reveal reveal-delay-2">
-          <div class="card-visual">
-            <div class="visual-placeholder">Sales Engineering</div>
-          </div>
+        <div class="service-item">
           <div class="card-title">営業支援</div>
           <div class="card-sub">Strategy & Execution</div>
           <p class="card-desc">
@@ -71,14 +61,19 @@ const description = "インサイドハート株式会社の公式サイト。�
           </p>
           <a href="/service" class="card-link">View project &rarr;</a>
         </div>
-        <div class="card reveal reveal-delay-3">
-          <div class="card-visual">
-            <div class="visual-placeholder">Systems & AI</div>
-          </div>
+        <div class="service-item">
           <div class="card-title">システム・AI開発</div>
           <div class="card-sub">Technology Solutions</div>
           <p class="card-desc">
-            最先端の技術を活用したシステム構築。ビジネスプロセスをテクノロジーで「なめらか」にします。
+            最先端の技術を活用したシステム構築。AI・受託開発でビジネスプロセスを「なめらか」にします。
+          </p>
+          <a href="/service" class="card-link">View project &rarr;</a>
+        </div>
+        <div class="service-item">
+          <div class="card-title">コンサル・Webマーケ</div>
+          <div class="card-sub">Strategy & Growth</div>
+          <p class="card-desc">
+            データに基づいた戦略立案。デジタル領域の集客から成約までを最適化し、事業成長を加速させます。
           </p>
           <a href="/service" class="card-link">View project &rarr;</a>
         </div>
@@ -89,23 +84,42 @@ const description = "インサイドハート株式会社の公式サイト。�
   <!-- Philosophy -->
   <section class="section bg-soft" id="philosophy">
     <div class="container">
-      <div class="philosophy-container reveal">
-        <div class="section-header">
+      <div class="editorial-block reveal">
+      <div class="section-header reveal">
           <span class="section-num">02 / Mission</span>
-          <h2>理念</h2>
+          <h2 class="block-title">理念</h2>
         </div>
         <div class="philosophy-content">
-          <h3 class="philosophy-main">大切な人の、<br class="pc-only" />大切な人を大切にする</h3>
+          <h3 class="philosophy-main">大切な人の、大切な人を大切にする</h3>
+          <p class="block-sub">私たちは関わったすべての人々の、物心両面の豊かさと幸福を追求します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section" id="values">
+    <div class="container">
+      <div class="editorial-block reveal">
+      <div class="section-header reveal">
+          <span class="section-num">03 / Our Values</span>
+          <h2 class="block-title">大切にする価値観</h2>
+        </div>
+        <div class="block-content">
+          <h3 class="values-text">
+            愛 / 感謝 / 誠実 / 素直 / 勉強熱心 / 前向行動
+          </h3>
+          <p class="block-sub">私たちはこれらの価値観を大切にして行動します。</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- News -->
-  <section class="section" id="news">
+  <section class="section bg-soft" id="news">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-num">03 / News</span>
+        <span class="section-num">04 / News</span>
         <h2>お知らせ</h2>
       </div>
       <div class="news-list reveal">
@@ -151,92 +165,79 @@ const description = "インサイドハート株式会社の公式サイト。�
     overflow: hidden;
   }
 
-  .hero-image {
+  .hero-canvas {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    filter: blur(10px);
-    opacity: 0.2;
-    transform: scale(1.05);
+    z-index: 0;
+    opacity: 0.6;
   }
 
-  .hero-curves {
+  @keyframes slowZoom {
+    0% { transform: scale(1.1); }
+    100% { transform: scale(1.25); }
+  }
+
+  .hero-blur-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.9) 100%);
+    z-index: 1;
+  }
+
+  /* Floating Light Particles - Robust Implementation */
+  .hero-light-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .light-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    mix-blend-mode: screen;
     opacity: 0.3;
   }
 
-  /* Grid for Hero */
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
-    align-items: center;
+  .light-blue {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+    top: -10%;
+    left: -10%;
+    animation: floatBlue 25s ease-in-out infinite alternate;
   }
 
-  .hero-visual {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
+  .light-orange {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #ff9d00 0%, transparent 70%);
+    bottom: -10%;
+    right: -10%;
+    animation: floatOrange 20s ease-in-out infinite alternate-reverse;
   }
 
-  .visual-card {
-    width: 100%;
-    max-width: 400px;
-    aspect-ratio: 1 / 1;
-    background: rgba(240, 240, 240, 0.1);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 1px;
-    position: relative;
-    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
+  @keyframes floatBlue {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(15%, 15%) scale(1.1); }
+    100% { transform: translate(-5%, 25%) scale(1); }
   }
 
-  .visual-inner {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .visual-tag {
-    font-family: var(--font-latin);
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--accent);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    position: absolute;
-    top: 40px;
-  }
-
-  .visual-dots {
-    width: 120px;
-    height: 120px;
-    background-image: radial-gradient(var(--line) 2px, transparent 2px);
-    background-size: 20px 20px;
-    opacity: 0.5;
-  }
-
-  .hero-bg-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #ffffff 30%, rgba(255, 255, 255, 0.7) 100%);
+  @keyframes floatOrange {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-15%, -15%) scale(1.2); }
+    100% { transform: translate(5%, -5%) scale(1.1); }
   }
 
   @media (max-width: 992px) {
@@ -283,42 +284,6 @@ const description = "インサイドハート株式会社の公式サイト。�
     letter-spacing: 0.1em;
   }
 
-  /* Card Grid adjustments */
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px; /* PKSHA-like thin grid line effect */
-    background-color: var(--line);
-  }
-
-  .card {
-    background: white;
-    padding: 60px 40px;
-    transition: background 0.4s ease;
-    border-radius: 0;
-    box-shadow: none;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .card-visual {
-    margin-bottom: 10px;
-  }
-
-  .visual-placeholder {
-    background-color: var(--support);
-    aspect-ratio: 16 / 9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--muted);
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-
   .pc-only {
     display: block;
   }
@@ -327,10 +292,45 @@ const description = "インサイドハート株式会社の公式サイト。�
     .pc-only {
       display: none;
     }
-    
-    .cards-grid {
-      grid-template-columns: 1fr;
-    }
+  }
+
+  /* Editorial Block (Sync for 02 & 03) */
+  .editorial-block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1000px;
+  }
+
+  .block-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    margin: 0;
+    color: var(--ink);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .block-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .block-main {
+    font-size: clamp(1.25rem, 3.5vw, 2rem);
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .block-sub {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    line-height: 1.6;
+    color: var(--muted);
+    font-weight: 500;
+    margin: 0;
   }
 
   /* News list refined */
@@ -361,7 +361,7 @@ const description = "インサイドハート株式会社の公式サイト。�
     }
 
     .hero-content h1 {
-      font-size: 32px;
+      font-size: clamp(2rem, 10vw, 3.5rem);
     }
 
     .hero-actions {
@@ -372,18 +372,105 @@ const description = "インサイドハート株式会社の公式サイト。�
       display: none;
     }
 
-    .philosophy-container {
-      padding: 40px 24px;
-    }
-
-    .mission-text {
-      font-size: 24px;
-    }
-
     .news-item {
       flex-direction: column;
-      align-items: flex-start;
-      gap: 4px;
+      gap: 8px;
+      padding: 24px 0;
+    }
+
+    .news-date {
+      min-width: auto;
+    }
+
+    .editorial-block {
+      gap: 24px;
+    }
+    
+    .section-header {
+      margin-bottom: 2.5rem;
     }
   }
+  /* Values specific fine-tuning */
+  .values-text {
+    font-size: clamp(1.15rem, 3vw, 1.6rem);
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 0;
+    letter-spacing: 0.1em;
+  }
+
+  /* Philosophy specific styles */
+  .philosophy-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .philosophy-main {
+    font-size: clamp(1.25rem, 3.5vw, 2rem);
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 0;
+  }
 </style>
+
+<script>
+  const canvas = document.getElementById('hero-canvas') as HTMLCanvasElement;
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    if (ctx) {
+      let width: number, height: number, particles: any[];
+
+      const init = () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+        particles = [];
+        const count = Math.min(Math.floor(width / 10), 100);
+        for (let i = 0; i < count; i++) {
+          particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: (Math.random() - 0.5) * 0.5,
+            size: Math.random() * 2.5 + 1.2
+          });
+        }
+      };
+
+      const animate = () => {
+        ctx.clearRect(0, 0, width, height);
+        particles.forEach((p, i) => {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0 || p.x > width) p.vx *= -1;
+          if (p.y < 0 || p.y > height) p.vy *= -1;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(7, 68, 150, 0.6)';
+          ctx.fill();
+
+          for (let j = i + 1; j < particles.length; j++) {
+            const p2 = particles[j];
+            const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+            if (dist < 200) {
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.strokeStyle = `rgba(7, 68, 150, ${0.3 * (1 - dist / 200)})`;
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
+          }
+        });
+        requestAnimationFrame(animate);
+      };
+
+      window.addEventListener('resize', init);
+      init();
+      animate();
+    }
+  }
+</script>
