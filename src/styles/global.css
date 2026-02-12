@@ -270,28 +270,6 @@ h2 {
   box-shadow: var(--shadow-base);
 }
 
-@media (max-width: 1024px) {
-  .cards-row {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0;
-    padding: 0;
-    border-bottom: none;
-    overflow: visible; /* Prevent any carousel behavior */
-  }
-  
-  .service-item {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px solid var(--line);
-    padding: 40px 0;
-  }
-
-  .service-item:last-child {
-    border-bottom: none;
-  }
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .section {

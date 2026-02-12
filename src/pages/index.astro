@@ -414,6 +414,28 @@ const description = "インサイドハート株式会社の公式サイトで�
     color: var(--ink);
     margin: 0;
   }
+
+  /* Force Mobile Service Layout */
+  @media (max-width: 1024px) {
+    .cards-row {
+      display: flex !important;
+      flex-direction: column !important;
+      margin-top: 40px !important;
+      overflow: visible !important;
+    }
+
+    .service-item {
+      flex: none !important;
+      width: 100% !important;
+      border-right: none !important;
+      border-bottom: 1px solid var(--line) !important;
+      padding: 40px 0 !important;
+    }
+
+    .service-item:last-child {
+      border-bottom: none !important;
+    }
+  }
 </style>
 
 <script>
