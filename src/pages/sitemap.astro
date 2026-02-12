@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "サイトマップ | Inside Heart株式会社";
+const description = "インサイドハート株式会社のサイトマップです。";
+---
+
+<Layout title={title} description={description}>
+  <section class="page-header">
+    <div class="container">
+      <h1>Sitemap</h1>
+      <p>サイトマップ</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <ul class="sitemap-list">
+        <li><a href="/">Top</a></li>
+        <li><a href="/service">事業内容</a></li>
+        <li><a href="/miroku">Miroku</a></li>
+        <li><a href="/company">会社概要</a></li>
+        <li><a href="/contact">お問い合わせ</a></li>
+        <li><a href="/privacy">プライバシーポリシー</a></li>
+        <li><a href="/sitemap">サイトマップ</a></li>
+      </ul>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .sitemap-list {
+    max-width: 600px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    border: 1px solid #eee;
+    border-radius: 8px;
+  }
+  
+  .sitemap-list li {
+    border-bottom: 1px solid #eee;
+  }
+  
+  .sitemap-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .sitemap-list a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.2s;
+  }
+  
+  .sitemap-list a:hover {
+    background-color: #f9f9f9;
+    color: var(--color-primary);
+    padding-left: 25px; /* Slight movement effect */
+  }
+</style>

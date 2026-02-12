@@ -1,0 +1,396 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Miroku | 心理学×可視化で営業組織の生産性を高める";
+const description = "Miroku（ミロク）は、心理学に基づいた可視化と称賛の文化を醸成し、営業組織の生産性を最大化させるインフラです。社内のモニターを、チームの限界を突破する力に変えます。";
+---
+
+<Layout title={title} description={description}>
+  <!-- Miroku Hero -->
+  <section class="miroku-hero">
+    <div class="container">
+      <div class="miroku-hero-content reveal">
+        <span class="badge">01 / Infrastructure</span>
+        <h1>オフィスを、<br/>「チームが加速する場所」へ。</h1>
+        <p class="hero-desc">Mirokuは、心理学に基づいた成果の可視化と称賛の仕組みで、<br/>自発的に成果を追い求める強い組織文化を構築します。</p>
+        <div class="hero-btns">
+          <a href="#pricing" class="btn btn-primary">Start for Free</a>
+          <a href="/contact" class="btn btn-secondary">Inquiry</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="section bg-soft">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">02 / Analysis</span>
+        <h2>現状の課題</h2>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card reveal reveal-delay-1">
+          <div class="icon">01</div>
+          <p>営業成績がリアルタイムで共有されず、現場のモチベーションが維持できない</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-2">
+          <div class="icon">02</div>
+          <p>目標達成の進捗が不透明で、月終盤まで状況の把握が困難</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-3">
+          <div class="icon">03</div>
+          <p>アナログな情報共有による管理コストの増大と更新の遅延</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section class="section">
+    <div class="container">
+      <div class="solution-intro reveal">
+        <div class="section-header">
+          <span class="section-num">03 / Solution</span>
+          <h2>Mirokuの提供価値</h2>
+        </div>
+        <p class="section-desc">デジタル技術と心理学を融合させ、<br/>現場の「見られている意識」と「認められる喜び」を最大化します。</p>
+      </div>
+      
+      <div class="feature-rows">
+        <div class="feature-row reveal">
+          <div class="feature-text">
+            <span class="feature-num">01 / Visualization</span>
+            <h3>即座の見える化</h3>
+            <p>専門的な操作は不要。用意されたテンプレートにより、誰でも直感的に進捗管理や掲示作成を行えます。情報はシームレスに更新され、常に最新の状態を保ちます。</p>
+          </div>
+          <div class="feature-visual">
+            <div class="visual-placeholder">Data Interface</div>
+          </div>
+        </div>
+        
+        <div class="feature-row reverse reveal">
+          <div class="feature-text">
+            <span class="feature-num">02 / Feedback</span>
+            <h3>リアルタイムな相互作用</h3>
+            <p>成果が上がったその瞬間、全社に共有。即時の称賛とフィードバックが、エンジニアリングされた「お祝い」の空気を作り、次の成果へのインセンティブとなります。</p>
+          </div>
+          <div class="feature-visual">
+            <div class="visual-placeholder">Network Interaction</div>
+          </div>
+        </div>
+
+        <div class="feature-row reveal">
+          <div class="feature-text">
+            <span class="feature-num">03 / Efficiency</span>
+            <h3>管理のデジタル化</h3>
+            <p>アナログな貼り替え作業から解放されます。オフィスの中心にあるモニターが、全社員の「現在地」を映し出し、組織全体のシンクロニシティを高めます。</p>
+          </div>
+          <div class="feature-visual">
+            <div class="visual-placeholder">System Integration</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="section bg-soft" id="pricing">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">04 / Pricing</span>
+        <h2>プラン・料金</h2>
+      </div>
+      <div class="pricing-grid">
+        <!-- Free Plan -->
+        <div class="pricing-card reveal reveal-delay-1">
+          <div class="plan-name">Free Plan</div>
+          <div class="plan-price">¥0<span class="period"> / 月</span></div>
+          <ul class="plan-features">
+            <li>基本機能の利用</li>
+            <li>登録ユーザー数 制限有</li>
+            <li>基本テンプレート</li>
+          </ul>
+          <a href="/contact" class="btn btn-secondary">Get Started</a>
+        </div>
+        
+        <!-- Standard Plan -->
+        <div class="pricing-card featured reveal reveal-delay-2">
+          <div class="featured-label">RECOMMEND</div>
+          <div class="plan-name">Standard Plan</div>
+          <div class="plan-price">ASK</div>
+          <ul class="plan-features">
+            <li>すべての機能を開放</li>
+            <li>ユーザー数 無制限</li>
+            <li>カスタムテンプレート作成</li>
+            <li>導入・運用コンサルティング</li>
+          </ul>
+          <a href="/contact" class="btn btn-primary">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="miroku-cta">
+    <div class="container">
+      <h2>まずはフリープランから。<br/>貴社の組織を、もっとポジティブに。</h2>
+      <p>最短即日から導入可能です。まずはお気軽にお試しください。</p>
+      <div class="cta-btns">
+        <a href="/contact" class="btn btn-primary">今すぐ無料で始める</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Miroku Hero */
+  .miroku-hero {
+    background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+    padding: 140px 0 100px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .badge {
+    display: inline-block;
+    background-color: var(--support);
+    color: var(--primary);
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: 0.05em;
+  }
+
+  .miroku-hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: var(--ink);
+  }
+
+  .hero-desc {
+    font-size: 18px;
+    color: var(--body-text);
+    margin-bottom: 40px;
+    line-height: 1.8;
+  }
+
+  .hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Problems */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .problem-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-base);
+    text-align: center;
+  }
+
+  .problem-card .icon {
+    font-size: 24px;
+    color: #e53e3e;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  /* Solution */
+  .section-desc {
+    text-align: center;
+    font-size: 16px;
+    color: var(--body-text);
+    margin-bottom: 60px;
+    line-height: 2;
+  }
+
+  .feature-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-top: 60px;
+  }
+
+  .feature-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .feature-row.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .feature-text {
+    flex: 1;
+  }
+
+  .feature-num {
+    font-family: var(--font-latin);
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .feature-text h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--ink);
+  }
+
+  .feature-text p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .feature-visual {
+    flex: 1;
+  }
+
+  .visual-placeholder {
+    background-color: #f0f4f9;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+    color: var(--muted);
+    font-size: 14px;
+    border: 1px solid var(--line);
+  }
+
+  /* Pricing */
+  .pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 40px auto 0;
+  }
+
+  .pricing-card {
+    flex: 1;
+    background: white;
+    padding: 50px 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-base);
+    text-align: center;
+    position: relative;
+    border: 1px solid var(--line);
+  }
+
+  .pricing-card.featured {
+    border: 2px solid var(--primary);
+    transform: scale(1.05);
+    z-index: 2;
+  }
+
+  .featured-label {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary);
+    color: white;
+    padding: 6px 20px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .plan-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--ink);
+  }
+
+  .plan-price {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: 30px;
+  }
+
+  .plan-price .period {
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--muted);
+  }
+
+  .plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    text-align: left;
+  }
+
+  .plan-features li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 14px;
+    color: var(--body-text);
+  }
+
+  .plan-features li::before {
+    content: "✓";
+    color: var(--primary);
+    margin-right: 10px;
+    font-weight: bold;
+  }
+
+  /* Miroku CTA */
+  .miroku-cta {
+    background-color: var(--support);
+    padding: 100px 0;
+    text-align: center;
+  }
+
+  .miroku-cta h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .miroku-cta p {
+    margin-bottom: 40px;
+    color: var(--body-text);
+  }
+
+  @media (max-width: 768px) {
+    .miroku-hero h1 {
+      font-size: 32px;
+    }
+    
+    .problem-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .feature-row, .feature-row.reverse {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .pricing-grid {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .pricing-card.featured {
+      transform: none;
+      margin-top: 20px;
+    }
+  }
+</style>

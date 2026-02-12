@@ -1,0 +1,193 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "お問い合わせ | Inside Heart株式会社";
+const description = "インサイドハート株式会社へのお問い合わせ。";
+const endpoint = import.meta.env.PUBLIC_CONTACT_FORM_ENDPOINT || "";
+---
+
+<Layout title={title} description={description}>
+  <section class="page-header">
+    <div class="container">
+      <h1>Contact</h1>
+      <p>お問い合わせ</p>
+    </div>
+  </section>
+
+  <section class="section contact-form-section">
+    <div class="container">
+      <p class="form-lead">
+        ご相談・ご質問は下記フォームよりお気軽にお問い合わせください。<br>
+        通常2?3営業日以内にご連絡いたします。
+      </p>
+
+      <form class="contact-form" id="contactForm" action={endpoint} method="POST">
+        <div class="form-group">
+          <label for="name">お名前 <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required placeholder="例：山田 太郎" />
+        </div>
+
+        <div class="form-group">
+          <label for="company">会社名</label>
+          <input type="text" id="company" name="company" placeholder="例：インサイドハート株式会社" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">メールアドレス <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="例：info@example.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="tel">電話番号</label>
+          <input type="tel" id="tel" name="tel" placeholder="例：03-1234-5678" />
+        </div>
+
+        <div class="form-group">
+          <label for="type">お問い合わせ種別 <span class="required">*</span></label>
+          <select id="type" name="type" required>
+            <option value="" disabled selected>選択してください</option>
+            <option value="Miroku">Mirokuについて</option>
+            <option value="SalesSupport">営業支援について</option>
+            <option value="AI">AI活用について</option>
+            <option value="System">システム受託開発について</option>
+            <option value="Other">その他</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="content">お問い合わせ内容 <span class="required">*</span></label>
+          <textarea id="content" name="content" rows="6" required placeholder="具体的なご相談内容をご記入ください"></textarea>
+        </div>
+
+        <div class="form-group privacy-check">
+          <label>
+            <input type="checkbox" required />
+            <a href="/privacy" target="_blank">プライバシーポリシー</a>に同意する
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">送信する</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</Layout>
+
+<script define:vars={{ endpoint }}>
+  const form = document.getElementById('contactForm');
+  
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      if (!endpoint) {
+        e.preventDefault();
+        alert('現在フォームはメンテナンス中です。お手数ですが、後ほど再度お試しください。(Endpoint not configured)');
+        return;
+      }
+      // If endpoint is set, let the form submit normally
+    });
+  }
+</script>
+
+<style>
+  .page-header {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .form-lead {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+  
+  .form-group {
+    margin-bottom: 24px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .required {
+    color: #cc0000;
+    font-size: 0.8em;
+    margin-left: 4px;
+    vertical-align: top;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(7, 68, 150, 0.1);
+  }
+  
+  .privacy-check {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .privacy-check label {
+    font-weight: normal;
+    cursor: pointer;
+  }
+  
+  .privacy-check a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+  
+  .form-actions {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .submit-btn {
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    padding: 14px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #053370;
+    transform: translateY(-2px);
+  }
+  
+  .submit-btn:active {
+    transform: translateY(0);
+  }
+</style>

@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "事業内容 | Inside Heart株式会社";
+const description = "インサイドハート株式会社の事業内容です。営業支援、システム受託開発、AI活用コンサルティングなど、お客様のニーズに合わせたソリューションを提供します。";
+---
+
+<Layout title={title} description={description}>
+  <section class="page-header">
+    <div class="container">
+      <h1>Service</h1>
+      <p>事業内容</p>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="container">
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-title">営業支援事業</div>
+          <div class="card-sub">Sales Support</div>
+          <p class="card-desc">
+            貴社の営業課題に対し、戦略設計から実行支援までトータルでサポートいたします。
+            状況に応じてカスタマイズ可能な柔軟な支援体制を構築します。
+          </p>
+          <div class="tag-list">
+            <span class="tag">営業戦略設計</span>
+            <span class="tag">リード獲得支援</span>
+            <span class="tag">商談同席・代行</span>
+            <span class="tag">インサイドセールス代行</span>
+            <span class="tag">営業教育・仕組み化</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">システム受託開発</div>
+          <div class="card-sub">System Development</div>
+          <p class="card-desc">
+            Webシステム、アプリケーション開発など、お客様の業務要件に合わせて開発を行います。
+            既存システムの改修や、新規サービスの立ち上げなど、幅広くご相談いただけます。
+          </p>
+          <p class="card-note">※要件定義から運用保守まで対応（要相談）</p>
+        </div>
+        <div class="card">
+          <div class="card-title">AI活用コンサルティング</div>
+          <div class="card-sub">AI Consulting</div>
+          <p class="card-desc">
+            最新のAI技術を活用した業務効率化や、社内AI導入のコンサルティングを行います。
+            単純作業の自動化からデータ分析まで、AIの可能性をビジネスに実装します。
+          </p>
+          <p class="card-note">※対象領域は課題に合わせてご提案（要相談）</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container" style="text-align: center;">
+      <h2>まずはお気軽にご相談ください</h2>
+      <p style="margin-bottom: 24px;">貴社の課題に合わせた最適なソリューションをご提案いたします。</p>
+      <a href="/contact" class="btn btn-primary" style="min-width: 240px;">お問い合わせはこちら</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .tag {
+    background-color: var(--support);
+    color: var(--primary);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .card-note {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 12px;
+  }
+
+  .cta-section {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 80px 0;
+  }
+
+  .cta-section h2 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .cta-section p {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .cta-section .btn-primary {
+    background-color: #fff;
+    color: var(--primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .cta-section .btn-primary:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+</style>

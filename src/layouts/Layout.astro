@@ -1,0 +1,90 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "Inside Heart株式会社",
+  description = "インサイドハート株式会社の公式サイトです。クラウドシステムの企画・運営・開発、営業支援、AI活用コンサルティング事業などを展開しています。" 
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    
+    <!-- OGP -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:site_name" content="Inside Heart株式会社" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+    
+    <style>
+      body {
+        font-family: 'Noto Sans JP', sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      main {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    
+    <script>
+      // Intersection Observer for scroll reveal animations
+      const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            // Once revealed, we can stop observing this specific element
+            // observer.unobserve(entry.target); 
+          }
+        });
+      };
+
+      const options = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(revealCallback, options);
+
+      // Function to observe elements
+      const observeElements = () => {
+        const reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(el => observer.observe(el));
+      };
+
+      // Initial run
+      observeElements();
+
+      // For SPA-like transitions or dynamic content, we might need to re-run
+      document.addEventListener('astro:page-load', observeElements);
+    </script>
+  </body>
+</html>

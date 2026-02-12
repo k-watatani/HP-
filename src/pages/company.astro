@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "会社概要 | Inside Heart株式会社";
+const description = "インサイドハート株式会社の会社概要。";
+---
+
+<Layout title={title} description={description}>
+  <section class="page-header">
+    <div class="container">
+      <h1>Company</h1>
+      <p>会社概要</p>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="section">
+    <div class="container">
+      <div class="philosophy-block">
+        <h2 class="section-title" style="margin-bottom: 30px;">Corporate Philosophy</h2>
+        <div class="philosophy-content">
+          <h3 class="philosophy-main">大切な人の、大切な人を大切にする</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Table -->
+  <section class="section bg-soft">
+    <div class="container">
+      <h2 class="section-title">Overview</h2>
+      <div class="company-table-container">
+        <table class="company-table">
+          <tbody>
+            <tr>
+              <th>会社名</th>
+              <td>Inside Heart株式会社</td>
+            </tr>
+            <tr>
+              <th>代表取締役</th>
+              <td><img src="/rep.svg" alt="代表取締役" class="rep-img" /></td>
+            </tr>
+            <tr>
+              <th>所在地</th>
+              <td>〒224-0003 神奈川県横浜市都筑区中川中央１丁目２１ー３ー201</td>
+            </tr>
+            <tr>
+              <th>設立</th>
+              <td>2026年3月</td>
+            </tr>
+            <tr>
+              <th>事業内容</th>
+              <td>
+                クラウドシステムの企画・運営・開発<br>
+                営業支援事業<br>
+                AI活用コンサルティング<br>
+                システム受託開発<br>
+                コンサルティング<br>
+                マーケティング支援
+              </td>
+            </tr>
+            <tr>
+              <th>適格請求書発行事業者登録番号</th>
+              <td>取得次第掲載</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .philosophy-block {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px;
+    background:
+      radial-gradient(circle at top right, rgba(7, 68, 150, 0.05), transparent),
+      radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.8), transparent);
+    border-radius: 32px;
+    box-shadow: 0 20px 40px rgba(7, 68, 150, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    text-align: center;
+  }
+
+  .philosophy-main {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--ink);
+    margin-bottom: 0;
+  }
+
+  .company-table-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-base);
+    overflow: hidden;
+  }
+
+  .company-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .company-table th,
+  .company-table td {
+    padding: 24px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    font-size: 15px;
+  }
+
+  .company-table tr:last-child th,
+  .company-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .company-table th {
+    width: 30%;
+    font-weight: bold;
+    color: var(--ink);
+    background-color: #fff;
+    white-space: nowrap;
+  }
+
+  .company-table td {
+    color: var(--body-text);
+    line-height: 1.8;
+  }
+
+  .rep-img {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  @media (max-width: 768px) {
+    .philosophy-block {
+      padding: 40px 24px;
+    }
+
+    .philosophy-main {
+      font-size: 22px;
+    }
+
+    .company-table th,
+    .company-table td {
+      display: block;
+      width: 100%;
+      padding: 12px 24px;
+    }
+
+    .company-table th {
+      padding-bottom: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      border-bottom: none;
+    }
+
+    .company-table td {
+      padding-top: 0;
+      border-bottom: 1px solid var(--line);
+    }
+  }
+</style>

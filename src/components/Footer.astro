@@ -1,0 +1,71 @@
+---
+const today = new Date();
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-nav">
+      <a href="/service">事業内容</a>
+      <a href="/miroku">Miroku</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a href="/privacy">プライバシーポリシー</a>
+      <a href="/sitemap">サイトマップ</a>
+    </div>
+    
+    <div class="footer-info">
+      <p class="footer-address">
+        〒224-0003 神奈川県横浜市都筑区中川中央１丁目２１ー３ー201
+      </p>
+      <p class="copyright">&copy; {today.getFullYear()} Inside Heart Co., Ltd.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: #f2f2f2;
+    padding: 100px 0 60px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--body-text);
+  }
+
+  .footer-inner {
+    text-align: center;
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+
+  .footer-nav a {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+  }
+
+  .footer-nav a:hover {
+    color: var(--accent);
+  }
+
+  .footer-info {
+    color: var(--muted);
+    line-height: 2;
+  }
+
+  .footer-address {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .footer-nav {
+      gap: 16px 24px;
+    }
+  }
+</style>
