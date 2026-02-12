@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 
 const title = "Inside Heart株式会社 | ホーム";
-const description = "インサイドハート株式会社の公式サイトです。一度きりの人生に、挑戦のきっかけを。ITと人の力で企業の成長を支援します。" 
+const description = "Inside Heart（インサイドハート）の公式サイト。一度きりの人生に、挑戦のきっかけを。ITの力でビジネスをなめらかにします。";
 ---
 
 <Layout title={title} description={description}>
@@ -415,27 +415,6 @@ const description = "インサイドハート株式会社の公式サイトで�
     margin: 0;
   }
 
-  /* Force Mobile Service Layout */
-  @media (max-width: 1024px) {
-    .cards-row {
-      display: flex !important;
-      flex-direction: column !important;
-      margin-top: 40px !important;
-      overflow: visible !important;
-    }
-
-    .service-item {
-      flex: none !important;
-      width: 100% !important;
-      border-right: none !important;
-      border-bottom: 1px solid var(--line) !important;
-      padding: 40px 0 !important;
-    }
-
-    .service-item:last-child {
-      border-bottom: none !important;
-    }
-  }
 </style>
 
 <script>
