@@ -272,14 +272,15 @@ h2 {
 
 @media (max-width: 1024px) {
   .cards-row {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     margin: 0;
     padding: 0;
     border-bottom: none;
+    overflow: visible; /* Prevent any carousel behavior */
   }
   
   .service-item {
-    flex: none;
     width: 100%;
     border-right: none;
     border-bottom: 1px solid var(--line);
