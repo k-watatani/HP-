@@ -272,24 +272,22 @@ h2 {
 
 @media (max-width: 1024px) {
   .cards-row {
-    flex-direction: row;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    margin: 0 -40px;
-    padding: 0 40px;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
   }
   
-  .cards-row::-webkit-scrollbar {
-    display: none;
+  .service-item {
+    flex: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    padding: 40px 0;
   }
 
-  .service-item {
-    flex: 0 0 300px;
-    scroll-snap-align: start;
-    border-right: 1px solid var(--line);
-    padding: 40px 24px;
+  .service-item:last-child {
+    border-bottom: none;
   }
 }
 
