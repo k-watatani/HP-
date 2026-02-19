@@ -3,7 +3,9 @@
 
 <header class="header">
   <div class="container header-inner">
-    <a href="/" class="logo">Inside Heart</a>
+    <a href="/" class="logo">
+      <img src="/logo.png" alt="InsideHeart Inc. インサイドハート株式会社" class="logo-img" />
+    </a>
     <button class="menu-toggle" aria-label="メニューを開く">
       <span></span>
       <span></span>
@@ -55,14 +57,18 @@
   }
 
   .logo {
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: var(--ink);
-    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
   }
 
   .logo:hover {
-    opacity: 1;
+    opacity: 0.85;
+  }
+
+  .logo-img {
+    height: 44px;
+    width: auto;
+    display: block;
   }
 
   .nav-list {
