@@ -418,11 +418,11 @@ const description = "Inside Heart (インサイドハート) の公式サイト�
 </style>
 
 <script>
-  const canvas = document.getElementById('hero-canvas') as HTMLCanvasElement;
+  const canvas = document.getElementById('hero-canvas');
   if (canvas) {
     const ctx = canvas.getContext('2d');
     if (ctx) {
-      let width: number, height: number, particles: any[];
+      let width, height, particles;
 
       const init = () => {
         width = canvas.width = window.innerWidth;
