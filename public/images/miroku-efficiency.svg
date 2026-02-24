@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="800" y2="450">
+      <stop offset="0%" stop-color="#f8faff"/>
+      <stop offset="100%" stop-color="#eef2f9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg3)"/>
+
+  <g transform="translate(400, 225)">
+
+    <!-- Central large monitor showing integrated system -->
+    <g transform="translate(0, -20)">
+      <!-- Monitor stand -->
+      <rect x="-5" y="95" width="10" height="25" fill="#b0b0b0"/>
+      <rect x="-30" y="120" width="60" height="5" rx="2" fill="#c0c0c0"/>
+
+      <!-- Monitor frame -->
+      <rect x="-150" y="-80" width="300" height="180" rx="3" fill="#1a1a1a"/>
+      <rect x="-142" y="-72" width="284" height="158" rx="2" fill="#ffffff"/>
+
+      <!-- Header -->
+      <rect x="-142" y="-72" width="284" height="22" fill="#1a1a1a" rx="2"/>
+      <circle cx="-130" cy="-61" r="3" fill="#e53e3e"/>
+      <circle cx="-120" cy="-61" r="3" fill="#f6ad55"/>
+      <circle cx="-110" cy="-61" r="3" fill="#48bb78"/>
+      <text x="0" y="-57" font-size="7" fill="#ffffff" font-family="Inter, sans-serif" font-weight="600" text-anchor="middle">Miroku - Management Console</text>
+
+      <!-- Grid dashboard layout -->
+      <!-- Top left: Auto-updated scoreboard -->
+      <rect x="-136" y="-44" width="130" height="55" rx="2" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="0.5"/>
+      <text x="-128" y="-32" font-size="6" fill="#8e8e8e" font-family="Inter, sans-serif">Auto-Updated Board</text>
+      <!-- Mini table rows -->
+      <rect x="-130" y="-24" width="118" height="8" rx="1" fill="#074496" opacity="0.1"/>
+      <rect x="-128" y="-22" width="30" height="4" rx="1" fill="#074496" opacity="0.6"/>
+      <rect x="-90" y="-22" width="20" height="4" rx="1" fill="#074496" opacity="0.3"/>
+      <rect x="-60" y="-22" width="40" height="4" rx="1" fill="#48bb78" opacity="0.5"/>
+
+      <rect x="-130" y="-12" width="118" height="8" rx="1" fill="white"/>
+      <rect x="-128" y="-10" width="30" height="4" rx="1" fill="#074496" opacity="0.4"/>
+      <rect x="-90" y="-10" width="20" height="4" rx="1" fill="#074496" opacity="0.2"/>
+      <rect x="-60" y="-10" width="35" height="4" rx="1" fill="#074496" opacity="0.4"/>
+
+      <rect x="-130" y="0" width="118" height="8" rx="1" fill="#f8f9fa"/>
+      <rect x="-128" y="2" width="30" height="4" rx="1" fill="#074496" opacity="0.3"/>
+      <rect x="-90" y="2" width="20" height="4" rx="1" fill="#074496" opacity="0.2"/>
+      <rect x="-60" y="2" width="28" height="4" rx="1" fill="#f6ad55" opacity="0.5"/>
+
+      <!-- Top right: Template library -->
+      <rect x="2" y="-44" width="130" height="55" rx="2" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="0.5"/>
+      <text x="10" y="-32" font-size="6" fill="#8e8e8e" font-family="Inter, sans-serif">Templates</text>
+      <!-- Template cards -->
+      <rect x="8" y="-24" width="35" height="38" rx="1" fill="white" stroke="#e0e0e0" stroke-width="0.5"/>
+      <rect x="12" y="-20" width="27" height="3" rx="1" fill="#074496" opacity="0.4"/>
+      <rect x="12" y="-14" width="20" height="2" rx="1" fill="#d0d0d0"/>
+      <rect x="12" y="-10" width="24" height="2" rx="1" fill="#d0d0d0"/>
+      <rect x="12" y="-4" width="27" height="10" rx="1" fill="#074496" opacity="0.08"/>
+
+      <rect x="48" y="-24" width="35" height="38" rx="1" fill="white" stroke="#e0e0e0" stroke-width="0.5"/>
+      <rect x="52" y="-20" width="27" height="3" rx="1" fill="#48bb78" opacity="0.4"/>
+      <rect x="52" y="-14" width="20" height="2" rx="1" fill="#d0d0d0"/>
+      <rect x="52" y="-10" width="24" height="2" rx="1" fill="#d0d0d0"/>
+      <rect x="52" y="-4" width="27" height="10" rx="1" fill="#48bb78" opacity="0.08"/>
+
+      <rect x="88" y="-24" width="35" height="38" rx="1" fill="white" stroke="#074496" stroke-width="1"/>
+      <rect x="92" y="-20" width="27" height="3" rx="1" fill="#074496" opacity="0.6"/>
+      <rect x="92" y="-14" width="20" height="2" rx="1" fill="#d0d0d0"/>
+      <rect x="92" y="-10" width="24" height="2" rx="1" fill="#d0d0d0"/>
+      <rect x="92" y="-4" width="27" height="10" rx="1" fill="#074496" opacity="0.12"/>
+
+      <!-- Bottom: Live sync status -->
+      <rect x="-136" y="16" width="268" height="60" rx="2" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="0.5"/>
+      <text x="-128" y="28" font-size="6" fill="#8e8e8e" font-family="Inter, sans-serif">Live Sync Status</text>
+
+      <!-- Sync indicators -->
+      <g transform="translate(-120, 42)">
+        <circle r="3" fill="#48bb78"/>
+        <text x="8" y="3" font-size="5.5" fill="#1a1a1a" font-family="Inter, sans-serif">CRM Data</text>
+        <text x="60" y="3" font-size="5" fill="#48bb78" font-family="Inter, sans-serif">Synced</text>
+      </g>
+      <g transform="translate(-120, 56)">
+        <circle r="3" fill="#48bb78"/>
+        <text x="8" y="3" font-size="5.5" fill="#1a1a1a" font-family="Inter, sans-serif">Sales Figures</text>
+        <text x="60" y="3" font-size="5" fill="#48bb78" font-family="Inter, sans-serif">Synced</text>
+      </g>
+      <g transform="translate(20, 42)">
+        <circle r="3" fill="#48bb78"/>
+        <text x="8" y="3" font-size="5.5" fill="#1a1a1a" font-family="Inter, sans-serif">Display Board</text>
+        <text x="60" y="3" font-size="5" fill="#48bb78" font-family="Inter, sans-serif">Live</text>
+      </g>
+      <g transform="translate(20, 56)">
+        <circle r="3" fill="#074496"/>
+        <text x="8" y="3" font-size="5.5" fill="#1a1a1a" font-family="Inter, sans-serif">Notifications</text>
+        <text x="60" y="3" font-size="5" fill="#074496" font-family="Inter, sans-serif">Active</text>
+      </g>
+    </g>
+
+    <!-- Connected devices: arrows flowing into the monitor -->
+    <!-- Left: Laptop -->
+    <g transform="translate(-240, 30)">
+      <rect x="-30" y="-15" width="60" height="38" rx="2" fill="#333"/>
+      <rect x="-25" y="-10" width="50" height="28" rx="1" fill="#e8ecf0"/>
+      <rect x="-20" y="-5" width="40" height="4" rx="1" fill="#074496" opacity="0.3"/>
+      <rect x="-20" y="2" width="30" height="3" rx="1" fill="#d0d0d0"/>
+      <rect x="-20" y="8" width="35" height="3" rx="1" fill="#d0d0d0"/>
+      <path d="M-35,23 L35,23 L40,28 L-40,28 Z" fill="#b0b0b0"/>
+    </g>
+    <!-- Arrow from laptop to monitor -->
+    <line x1="-200" y1="30" x2="-155" y2="10" stroke="#074496" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4"/>
+    <polygon points="-155,10 -162,14 -159,7" fill="#074496" opacity="0.4"/>
+
+    <!-- Right: Tablet -->
+    <g transform="translate(240, 40)">
+      <rect x="-20" y="-30" width="40" height="55" rx="3" fill="#333"/>
+      <rect x="-16" y="-26" width="32" height="46" rx="2" fill="#e8ecf0"/>
+      <rect x="-12" y="-22" width="24" height="3" rx="1" fill="#074496" opacity="0.3"/>
+      <rect x="-12" y="-16" width="18" height="2" rx="1" fill="#d0d0d0"/>
+      <rect x="-12" y="-11" width="20" height="2" rx="1" fill="#d0d0d0"/>
+      <circle cx="0" cy="17" r="2" fill="#666" opacity="0.5"/>
+    </g>
+    <!-- Arrow from tablet to monitor -->
+    <line x1="210" y1="30" x2="155" y2="10" stroke="#074496" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4"/>
+    <polygon points="155,10 162,14 159,7" fill="#074496" opacity="0.4"/>
+
+    <!-- "No more analog" crossed out sticky note -->
+    <g transform="translate(-260, -100)" opacity="0.3">
+      <rect x="0" y="0" width="40" height="40" fill="#f6d365" transform="rotate(-5)"/>
+      <line x1="-5" y1="-5" x2="45" y2="45" stroke="#e53e3e" stroke-width="2"/>
+      <line x1="45" y1="-5" x2="-5" y2="45" stroke="#e53e3e" stroke-width="2"/>
+    </g>
+
+    <g transform="translate(260, -100)" opacity="0.3">
+      <rect x="0" y="0" width="40" height="40" fill="#f6d365" transform="rotate(5)"/>
+      <line x1="-5" y1="-5" x2="45" y2="45" stroke="#e53e3e" stroke-width="2"/>
+      <line x1="45" y1="-5" x2="-5" y2="45" stroke="#e53e3e" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Subtle decorative dots -->
+  <g opacity="0.1">
+    <circle cx="100" cy="60" r="3" fill="#074496"/>
+    <circle cx="700" cy="80" r="4" fill="#074496"/>
+    <circle cx="80" cy="400" r="2" fill="#074496"/>
+    <circle cx="720" cy="380" r="3" fill="#074496"/>
+  </g>
+</svg>

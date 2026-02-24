@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="800" y2="450">
+      <stop offset="0%" stop-color="#f8faff"/>
+      <stop offset="100%" stop-color="#eef2f9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg2)"/>
+
+  <!-- Central celebration scene: person achieving + notifications flying -->
+  <g transform="translate(400, 200)">
+
+    <!-- Office monitor (large screen in center-back) -->
+    <rect x="-120" y="-140" width="240" height="150" rx="3" fill="#1a1a1a"/>
+    <rect x="-112" y="-132" width="224" height="128" rx="2" fill="#ffffff"/>
+    <rect x="-4" y="10" width="8" height="30" fill="#b0b0b0"/>
+    <rect x="-25" y="40" width="50" height="6" rx="1" fill="#c0c0c0"/>
+
+    <!-- Screen content: celebration / achievement notification -->
+    <rect x="-112" y="-132" width="224" height="24" fill="#1a1a1a" rx="2"/>
+    <text x="0" y="-117" font-size="8" fill="#ffffff" font-family="Inter, sans-serif" font-weight="600" text-anchor="middle">Real-time Feed</text>
+
+    <!-- Achievement card on screen -->
+    <rect x="-95" y="-100" width="190" height="44" rx="3" fill="#fff9e6" stroke="#f6d365" stroke-width="1"/>
+    <!-- Trophy icon -->
+    <g transform="translate(-75, -78)">
+      <rect x="-5" y="0" width="10" height="8" rx="1" fill="#d69e2e"/>
+      <rect x="-8" y="-2" width="16" height="4" rx="2" fill="#d69e2e"/>
+      <rect x="-3" y="8" width="6" height="3" fill="#d69e2e"/>
+      <rect x="-6" y="11" width="12" height="2" rx="1" fill="#d69e2e"/>
+    </g>
+    <text x="-55" y="-84" font-size="7" fill="#d69e2e" font-family="Inter, sans-serif" font-weight="700">ACHIEVEMENT!</text>
+    <text x="-55" y="-74" font-size="6.5" fill="#1a1a1a" font-family="Noto Sans JP, sans-serif" font-weight="600">田中 太郎さんが月間目標を達成！</text>
+    <text x="-55" y="-64" font-size="5.5" fill="#8e8e8e" font-family="Inter, sans-serif">¥4,200,000 / ¥4,000,000 (105%)</text>
+
+    <!-- Celebration confetti/particles -->
+    <g opacity="0.6">
+      <rect x="-80" y="-108" width="4" height="4" fill="#074496" transform="rotate(30 -78 -106)"/>
+      <rect x="-50" y="-105" width="3" height="5" fill="#d69e2e" transform="rotate(-20 -48 -102)"/>
+      <rect x="50" y="-108" width="4" height="3" fill="#e53e3e" transform="rotate(45 52 -107)"/>
+      <rect x="70" y="-104" width="3" height="4" fill="#074496" transform="rotate(-30 71 -102)"/>
+      <circle cx="-60" cy="-108" r="2" fill="#48bb78"/>
+      <circle cx="30" cy="-106" r="2" fill="#f6ad55"/>
+      <circle cx="80" cy="-108" r="1.5" fill="#d69e2e"/>
+    </g>
+
+    <!-- Recent feed items on screen -->
+    <rect x="-95" y="-50" width="190" height="22" rx="2" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="0.5"/>
+    <g transform="translate(-82, -39)">
+      <circle r="6" fill="#074496"/>
+      <circle r="5" fill="#d0dff0"/>
+      <circle cx="0" cy="-1" r="2" fill="#074496"/>
+      <ellipse cx="0" cy="3" rx="3" ry="2" fill="#074496"/>
+    </g>
+    <text x="-70" y="-37" font-size="5.5" fill="#1a1a1a" font-family="Noto Sans JP, sans-serif">佐藤さんが新規契約を獲得 🎉</text>
+    <text x="60" y="-37" font-size="5" fill="#8e8e8e" font-family="Inter, sans-serif">2 min ago</text>
+
+    <rect x="-95" y="-24" width="190" height="22" rx="2" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="0.5"/>
+    <g transform="translate(-82, -13)">
+      <circle r="6" fill="#6b7280"/>
+      <circle r="5" fill="#e5e7eb"/>
+      <circle cx="0" cy="-1" r="2" fill="#6b7280"/>
+      <ellipse cx="0" cy="3" rx="3" ry="2" fill="#6b7280"/>
+    </g>
+    <text x="-70" y="-11" font-size="5.5" fill="#1a1a1a" font-family="Noto Sans JP, sans-serif">鈴木さんが商談アポイントを設定</text>
+    <text x="60" y="-11" font-size="5" fill="#8e8e8e" font-family="Inter, sans-serif">5 min ago</text>
+
+    <!-- People around the monitor looking at it -->
+    <!-- Person left (cheering) -->
+    <g transform="translate(-180, 10)">
+      <!-- Body -->
+      <rect x="-12" y="10" width="24" height="40" rx="4" fill="#1a1a1a"/>
+      <!-- Head -->
+      <circle cx="0" cy="-2" r="14" fill="#f0e0d0"/>
+      <!-- Hair -->
+      <ellipse cx="0" cy="-10" rx="14" ry="8" fill="#333"/>
+      <!-- Arms up (cheering) -->
+      <line x1="-14" y1="15" x2="-28" y2="-10" stroke="#1a1a1a" stroke-width="5" stroke-linecap="round"/>
+      <line x1="14" y1="15" x2="28" y2="-10" stroke="#1a1a1a" stroke-width="5" stroke-linecap="round"/>
+      <!-- Hands -->
+      <circle cx="-28" cy="-10" r="4" fill="#f0e0d0"/>
+      <circle cx="28" cy="-10" r="4" fill="#f0e0d0"/>
+      <!-- Legs -->
+      <line x1="-6" y1="50" x2="-6" y2="80" stroke="#333" stroke-width="5" stroke-linecap="round"/>
+      <line x1="6" y1="50" x2="6" y2="80" stroke="#333" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Person right (clapping) -->
+    <g transform="translate(180, 10)">
+      <rect x="-12" y="10" width="24" height="40" rx="4" fill="#333"/>
+      <circle cx="0" cy="-2" r="14" fill="#f0dcc8"/>
+      <ellipse cx="0" cy="-10" rx="14" ry="8" fill="#1a1a1a"/>
+      <!-- Arms forward (clapping) -->
+      <line x1="-14" y1="18" x2="-24" y2="5" stroke="#333" stroke-width="5" stroke-linecap="round"/>
+      <line x1="14" y1="18" x2="24" y2="5" stroke="#333" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="-24" cy="5" r="4" fill="#f0dcc8"/>
+      <circle cx="24" cy="5" r="4" fill="#f0dcc8"/>
+      <line x1="-6" y1="50" x2="-6" y2="80" stroke="#1a1a1a" stroke-width="5" stroke-linecap="round"/>
+      <line x1="6" y1="50" x2="6" y2="80" stroke="#1a1a1a" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Floating notification bubbles -->
+    <g transform="translate(-200, -80)" opacity="0.8">
+      <rect x="0" y="0" width="50" height="20" rx="10" fill="#074496"/>
+      <text x="25" y="13" font-size="8" fill="white" font-family="Inter, sans-serif" font-weight="600" text-anchor="middle">👏 Nice!</text>
+    </g>
+
+    <g transform="translate(160, -100)" opacity="0.7">
+      <rect x="0" y="0" width="60" height="20" rx="10" fill="#48bb78"/>
+      <text x="30" y="13" font-size="8" fill="white" font-family="Inter, sans-serif" font-weight="600" text-anchor="middle">🎉 Great!</text>
+    </g>
+
+    <g transform="translate(200, -50)" opacity="0.6">
+      <rect x="0" y="0" width="45" height="20" rx="10" fill="#d69e2e"/>
+      <text x="22" y="13" font-size="8" fill="white" font-family="Inter, sans-serif" font-weight="600" text-anchor="middle">🔥 Go!</text>
+    </g>
+  </g>
+
+  <!-- Subtle decorative dots -->
+  <g opacity="0.1">
+    <circle cx="80" cy="60" r="3" fill="#074496"/>
+    <circle cx="720" cy="80" r="4" fill="#074496"/>
+    <circle cx="70" cy="400" r="2" fill="#074496"/>
+    <circle cx="730" cy="390" r="3" fill="#074496"/>
+  </g>
+</svg>

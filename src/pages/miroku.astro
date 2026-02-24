@@ -64,10 +64,10 @@ const description = "Miroku（ミロク）は、心理学に基づいた可視�
             <p>専門的な操作は不要。用意されたテンプレートにより、誰でも直感的に進捗管理や掲示作成を行えます。情報はシームレスに更新され、常に最新の状態を保ちます。</p>
           </div>
           <div class="feature-visual">
-            <div class="visual-placeholder">Data Interface</div>
+            <img src="/images/miroku-visualization.svg" alt="営業ダッシュボード - ランキングと売上グラフ" class="feature-img" />
           </div>
         </div>
-        
+
         <div class="feature-row reverse reveal">
           <div class="feature-text">
             <span class="feature-num">02 / Feedback</span>
@@ -75,7 +75,7 @@ const description = "Miroku（ミロク）は、心理学に基づいた可視�
             <p>成果が上がったその瞬間、全社に共有。即時の称賛とフィードバックが、エンジニアリングされた「お祝い」の空気を作り、次の成果へのインセンティブとなります。</p>
           </div>
           <div class="feature-visual">
-            <div class="visual-placeholder">Network Interaction</div>
+            <img src="/images/miroku-feedback.svg" alt="リアルタイムフィードバック - 成果共有と称賛" class="feature-img" />
           </div>
         </div>
 
@@ -86,7 +86,7 @@ const description = "Miroku（ミロク）は、心理学に基づいた可視�
             <p>アナログな貼り替え作業から解放されます。オフィスの中心にあるモニターが、全社員の「現在地」を映し出し、組織全体のシンクロニシティを高めます。</p>
           </div>
           <div class="feature-visual">
-            <div class="visual-placeholder">System Integration</div>
+            <img src="/images/miroku-efficiency.svg" alt="管理コンソール - デジタル一元管理" class="feature-img" />
           </div>
         </div>
       </div>
@@ -201,7 +201,7 @@ const description = "Miroku（ミロク）は、心理学に基づいた可視�
 
   .problem-card .icon {
     font-size: 24px;
-    color: #e53e3e;
+    color: var(--ink);
     margin-bottom: 20px;
     font-weight: bold;
   }
@@ -260,15 +260,12 @@ const description = "Miroku（ミロク）は、心理学に基づいた可視�
     flex: 1;
   }
 
-  .visual-placeholder {
-    background-color: #f0f4f9;
+  .feature-img {
+    width: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    object-fit: cover;
     border-radius: var(--radius);
-    color: var(--muted);
-    font-size: 14px;
     border: 1px solid var(--line);
   }
 
